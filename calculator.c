@@ -7,7 +7,16 @@ int calculate(int firstNumber, int secondNumber, int operation) {
     switch(operation) {
         case 0:
             return firstNumber + secondNumber;
+        case 1:
+            return firstNumber - secondNumber;
+        case 2:
+            return firstNumber * secondNumber;
+        case 3:
+            return firstNumber / secondNumber;
+        case 4:
+            return firstNumber ^ secondNumber;                
     }
+    printf("Invalid operation ID: %d (0 to 4 allowed!)", operation);
     return -1;
 }
 
@@ -16,6 +25,6 @@ int calculate(int firstNumber, int secondNumber, int operation) {
  */
 
 int main() {    
-    int output = calculate(10,5,0);
+    int output = calculate(10,5,5);
     printf("Output is %d", output);
 }
