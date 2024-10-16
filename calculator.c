@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+int firstNumber;
+int secondNumber;
+int operation;
+
 /**
  * <p>Calculates the output based on the user's input.
  */
@@ -25,6 +29,15 @@ int calculate(int firstNumber, int secondNumber, int operation) {
  */
 
 int main() {    
-    int output = calculate(10,5,5);
-    printf("Output is %d", output);
+    printf("Calculator\n\nFirst Number: ");
+    scanf("%d", &firstNumber);
+
+    printf("\nSecond Number: ");
+    scanf("%d", &secondNumber);
+
+    printf("\nOperation (0 to 4): ");
+    scanf("%d", &operation);
+
+    printf("\n\nOutput: %d", calculate(firstNumber, secondNumber, operation));
+
 }
